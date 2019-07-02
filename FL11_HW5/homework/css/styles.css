@@ -92,7 +92,7 @@ article img {
   cursor: pointer;
 }
 article img:hover {
-  filter: opacity(50%)
+  filter: opacity(50%);
 }
 .post-column .post {
   display: flex;
@@ -103,7 +103,7 @@ article:nth-child(even) .post {
   flex-direction: row;  
 }
 .post:hover {
-  filter: opacity(50%)
+  filter: opacity(50%);
 }
 .post:last-child {
   width: 100%;
