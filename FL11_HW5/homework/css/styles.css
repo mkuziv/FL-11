@@ -1,0 +1,270 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+/* :root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #162b4d;
+  --link: #fff;
+  --link--hover: #b8b8b8;
+  --bg-footer-color: #162b4d;;
+} */
+
+body {
+  font-family: roboto;
+}
+.post-1 {
+	background: #B71757;
+}
+.post-2 {
+	background: #0D7E71;
+}
+.post-3 {
+	background: #b1660e;
+}
+.post-4 {
+	background: #d12767;
+}
+.post-5 {
+	background: #2d95bb;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: roboto;
+  background: #0b192f;
+  padding: 0 10%;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background: #162b4d;
+}
+h1 {
+  font-weight: 200;
+  padding: 10px 15px;
+  font-size: 30px;
+  color: #fff;
+}
+.header-text span {
+  color:#d12865;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+}
+a {
+  display: block;  
+  padding: 20px 25px;
+  text-decoration: none;
+  color: #fff;
+}
+li a:hover {
+  background: #283d5f;
+  color: #b8b8b8;
+}
+main {
+  display: flex;
+  margin:10px 0;
+}
+.section {
+  margin-right: 1%;
+  width: 72%;
+}
+article {  
+  display: flex;
+  color: #fff;
+} 
+article:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.picture {
+  display: flex;
+  flex:1;
+}
+article img {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+article img:hover {
+  filter: opacity(50%)
+}
+.post-column .post {
+  display: flex;
+  flex-direction: row-reverse;
+  flex: 1;  
+}
+article:nth-child(even) .post {
+  flex-direction: row;  
+}
+.post:hover {
+  filter: opacity(50%)
+}
+.post:last-child {
+  width: 100%;
+}
+.post-date {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-end;
+  padding: 0 2%;  
+}
+article:nth-child(even) .post-date {
+  align-items: flex-start;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  padding: 0 2%;
+  margin-bottom: 1%;  
+}
+article:nth-child(even) .description {
+  text-align: right;
+}
+.post-date span {
+  font-size: 50%;
+  font-weight: 200; 
+  display: block;
+  margin-top: -15px; 
+}
+h2 {
+  padding-top: 3%;
+  font-size: 220%;
+  font-weight: 200;
+  cursor: pointer;
+}
+.post-date p {
+  font-size: 220%;
+  font-weight: 200;
+  filter: opacity(70%);
+}
+p {
+  padding-top: 2%;
+  filter: opacity(70%);
+  font-size: 80%; 
+  line-height: 1.5em;
+  font-weight: 200;
+}
+aside {
+  background: #0b192f; 
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 27%;
+  height: 50%;
+}
+.news-img {
+  margin-bottom: 4%;
+  background: #fff;
+}
+.news-img img {
+  height: 100%;
+  width: 100%;  
+}
+.news-description {
+  padding: 5% 10%;
+}
+h3 {
+  font-size: 120%;
+  font-weight: 200;
+}
+.news-description p {
+  color: #b8b8b8;
+}
+footer {
+  background: #162b4d;
+  display: flex;
+  justify-content: space-between;
+  color: #3b6a8a;
+  padding: 20px 10px;
+  margin-bottom: 1%;
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 2%;
+  }
+  header {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+  h1 {
+    padding: 50px 0;
+  }
+  nav li {
+    display: none;
+  }
+  nav::before {
+    position: absolute;
+    content: "\2630";
+    color: #fff;
+    margin: 10px 0;
+  }
+  .section {
+    width: 60%;
+  }
+  aside {
+    width: 39%;
+    background: #0b192f;
+  }
+  article, article:nth-child(even) {
+    flex-direction: column;
+  }
+  article:nth-child(even) .post {
+    flex-direction: column-reverse;
+    align-items: center;  
+  }
+  .post-column .post {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .post {    
+    padding: 5% 10%;
+  }
+  .description {
+    text-align: left;
+  }
+  article:nth-child(even) .description {
+    text-align: left;
+  }
+  .news-img {
+    background: #fff;
+    padding-bottom: 4%;
+    margin-bottom: 4%;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }  
+}
+@media screen and (max-width: 480px) {
+  body {    
+    padding: 0 1%;
+  }
+  header {
+    margin-bottom: 3%;
+  }
+  main {
+    flex-direction: column;
+    margin: 0;
+  }
+  .section {
+    width: 100%;
+  }
+  aside {
+    width: 100%;
+    background: #0b192f;
+  }
+  .news-description {
+    padding: 5% 4%;
+  }
+}
